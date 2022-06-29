@@ -159,3 +159,21 @@ console.log(friends.includes('Bob'));
 if (friends.includes('Bob')) {
     console.log('You have a friend called Bob');
 }
+
+// Array operators assigments 
+const neighbours = ['Russia', 'Azerbaijan', 'Armenia'];
+
+// Added Utopia at the end of array
+neighbours.push('Utopia');
+console.log(neighbours);
+
+// Removed Utopia from the end of array
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('Germany')) {
+    console.log('Probably not a central European country :D');
+}
+
+neighbours[neighbours.indexOf('Russia')] = 'Republic of Russia';
+console.log(neighbours);
