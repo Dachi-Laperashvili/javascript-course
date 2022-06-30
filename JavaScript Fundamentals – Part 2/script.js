@@ -232,3 +232,21 @@ const jonas = {
     }
 }
 console.log(jonas.getSummary());
+
+// Assigment
+const myCountry = {
+    country: 'Georgia',
+    capital: 'Tbilisi',
+    language: 'Georgian',
+    population: 3,
+    neighbours: ['Russia', 'Azerbaijan', 'Armenia', 'Turkey'],
+    describe: function () {
+        return `${this.country} has ${this.population} million ${this.language}-speaking people,${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+    },
+    checkIsland: function () {
+        this.isIsland = this.neighbours.length === 0 ? true : false;
+        return this.isIsland;
+    }
+}
+console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
