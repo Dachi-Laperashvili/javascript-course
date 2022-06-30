@@ -177,8 +177,6 @@ if (!neighbours.includes('Germany')) {
 neighbours[neighbours.indexOf('Russia')] = 'Republic of Russia';
 console.log(neighbours);
 
-*/
-
 // Introduction to Objects
 
 const myCountry = {
@@ -198,4 +196,22 @@ const jonas = {
     lastName: 'Schmedtmann',
     friends: ['Michael', 'Peter', 'Steven']
 }
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends,and his best friend is called ${jonas.friends[0]}`)
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends,and his best friend is called ${jonas.friends[0]}`);
+
+*/
+
+// Assigment
+const myCountry = {
+    country: 'Georgia',
+    capital: 'Tbilisi',
+    language: 'Georgian',
+    population: 3,
+    neighbours: ['Russia', 'Azerbaijan', 'Armenia', 'Turkey']
+}
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people,${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`);
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+console.log(myCountry['population']);
