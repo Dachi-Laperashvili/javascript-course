@@ -188,3 +188,14 @@ const myCountry = {
     population: 3,
     neighbours: ['Russia', 'Azerbaijan', 'Armenia', 'Turkey']
 }
+
+// Dot vs Break notation
+
+// Jonas has 3 friends,and his best friend is called michael
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    friends: ['Michael', 'Peter', 'Steven']
+}
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends,and his best friend is called ${jonas.friends[0]}`)
