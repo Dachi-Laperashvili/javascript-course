@@ -198,8 +198,6 @@ const jonas = {
 }
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends,and his best friend is called ${jonas.friends[0]}`);
 
-*/
-
 // Assigment
 const myCountry = {
     country: 'Georgia',
@@ -215,3 +213,22 @@ console.log(myCountry.population);
 
 myCountry['population'] -= 2;
 console.log(myCountry['population']);
+
+*/
+
+// Object Methods
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    hasDriversLicense: true,
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license`
+    }
+}
+console.log(jonas.getSummary());
