@@ -113,7 +113,6 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Dachi'));
-*/
 
 // introduction to arrays
 
@@ -160,7 +159,7 @@ if (friends.includes('Bob')) {
     console.log('You have a friend called Bob');
 }
 
-// Array operators assigments 
+// Array operators assigments
 const neighbours = ['Russia', 'Azerbaijan', 'Armenia'];
 
 // Added Utopia at the end of array
@@ -177,3 +176,15 @@ if (!neighbours.includes('Germany')) {
 
 neighbours[neighbours.indexOf('Russia')] = 'Republic of Russia';
 console.log(neighbours);
+
+*/
+
+// Introduction to Objects
+
+const myCountry = {
+    country: 'Georgia',
+    capital: 'Tbilisi',
+    language: 'Georgian',
+    population: 3,
+    neighbours: ['Russia', 'Azerbaijan', 'Armenia', 'Turkey']
+}
