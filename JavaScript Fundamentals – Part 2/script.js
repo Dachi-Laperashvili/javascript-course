@@ -280,9 +280,19 @@ for (let i = 0; i < years.length; i++) {
 }
 console.log(ages);
 
-// continue and break statements
+// Continue and Break statements
 
 for (let i = 0; i < jonas.length; i++) {
     if (typeof jonas[i] === 'number') break;
     console.log(jonas[i]);
 }
+
+// Assigment
+
+const populations = [125, 1000, 15, 200];
+const percentages2 = [];
+
+for (let i = 0; i < populations.length; i++) {
+    percentages2.push((populations[i] / 7900) * 100);
+}
+console.log(percentages2);
