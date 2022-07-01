@@ -270,13 +270,6 @@ const jonas = [
 
 const types = [];
 
-for (let i = 0; i < jonas.length; i++) {
-    console.log(jonas[i]);
-
-    // types[i] = typeof jonas[i];
-    types.push(typeof jonas[i]);
-}
-
 console.log(types);
 
 const years = [1991, 2007, 1969, 2020];
@@ -286,3 +279,10 @@ for (let i = 0; i < years.length; i++) {
     ages.push(2022 - years[i]);
 }
 console.log(ages);
+
+// continue and break statements
+
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break;
+    console.log(jonas[i]);
+}
