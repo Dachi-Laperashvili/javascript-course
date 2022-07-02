@@ -1,5 +1,6 @@
 'use strict'
 
+/*
 // Coding challenge #1
 
 // function to calculate average of three given scores
@@ -41,7 +42,7 @@ console.log(bills, tips, total);
 
 // Coding challenge #3
 
-// Marks stats 
+// Marks stats
 const mark = {
     fullName: 'Mark Miller',
     mass: 78,
@@ -71,3 +72,28 @@ if (mark.bmi > john.bmi) {
 } else if (john.bmi > mark.bmi) {
     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`);
 }
+*/
+
+// Coding challenge #4
+
+// Created array for bills,tips and totals
+
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
+
+// Function to calculate tip based on bill value
+
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+// Looping through each bill to return and push tips and totals based on it
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+}
+
+console.log(tips);
+console.log(totals);
