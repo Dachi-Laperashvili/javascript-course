@@ -296,3 +296,15 @@ for (let i = 0; i < populations.length; i++) {
     percentages2.push((populations[i] / 7900) * 100);
 }
 console.log(percentages2);
+
+// Looping backwards and loop in loop
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+
+for (let country = 0; country < listOfNeighbours.length; country++) {
+    console.log(`Country ${country + 1} neighbours`);
+
+    for (let i = 0; i < listOfNeighbours[country].length; i++) {
+        console.log(`Neighbour: ${listOfNeighbours[country][i]}`)
+    }
+};
