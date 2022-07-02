@@ -97,3 +97,14 @@ for (let i = 0; i < bills.length; i++) {
 
 console.log(tips);
 console.log(totals);
+
+// Bonus addition to calculate average value of arrays
+
+function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        return sum += arr[i];
+    }
+    console.log(sum / arr.length);
+};
+console.log(calcAverage(totals));
