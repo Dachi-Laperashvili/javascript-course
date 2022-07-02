@@ -249,7 +249,6 @@ const myCountry = {
 console.log(myCountry.describe());
 console.log(myCountry.checkIsland());
 
-*/
 
 // For loop
 
@@ -308,3 +307,17 @@ for (let country = 0; country < listOfNeighbours.length; country++) {
         console.log(`Neighbour: ${listOfNeighbours[country][i]}`)
     }
 };
+
+*/
+// While loop
+
+const populations = [125, 1000, 15, 200];
+const percentages2 = [];
+
+let country = 0;
+
+while (country < populations.length) {
+    percentages2.push((populations[country] / 7900) * 100);
+    country++;
+}
+console.log(percentages2);
