@@ -1,13 +1,19 @@
 'use strict';
-
+/*
 console.log(document.querySelector('.message').textContent);
-
-let message = (document.querySelector('.message').textContent =
-  '🎉 Correct Number! ');
-console.log(message);
 
 document.querySelector('.number').textContent = 13;
 document.querySelector('.score').textContent = 10;
 
 document.querySelector('.guess').value = 1;
-console.log(document.querySelector('.guess').value);
+*/
+
+const guessNum = function () {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess);
+  if (!guess) {
+    document.querySelector('.message').textContent = '❌ Not a Number!';
+  }
+};
+
+document.querySelector('.check').addEventListener('click', guessNum);
