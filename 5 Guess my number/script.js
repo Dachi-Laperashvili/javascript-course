@@ -1,17 +1,10 @@
 'use strict';
-/*
-console.log(document.querySelector('.message').textContent);
-
-document.querySelector('.number').textContent = 13;
-document.querySelector('.score').textContent = 10;
-
-document.querySelector('.guess').value = 1;
-*/
 
 let secretNum = Math.trunc(Math.random() * 20) + 1;
 let message = document.querySelector('.message');
 let box = document.querySelector('.number');
 let score = 10;
+let highscore = 0;
 
 const guessNum = function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -20,7 +13,13 @@ const guessNum = function () {
     message.textContent = '❌ Not a Number!';
   } else if (guess === secretNum) {
     message.textContent = '🎉 Correct Number!';
+    document.querySelector('body').style.backgroundColor = '#60b347 ';
+    document.querySelector('.number').style.width = '30rem';
     box.textContent = secretNum;
+    if (secretNum > highscore) {
+      highscore = secretNum;
+      document.querySelector('.highscore').textContent = highscore;
+    }
   } else if (guess > secretNum) {
     message.textContent = '📈 Too High!';
     score--;
@@ -45,6 +44,8 @@ const reset = function () {
   message.textContent = 'Start guessing...';
   document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#222 ';
+  document.querySelector('.number').style.width = '15rem';
 };
 
 document.querySelector('.check').addEventListener('click', guessNum);
