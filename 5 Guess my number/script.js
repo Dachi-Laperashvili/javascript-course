@@ -38,4 +38,14 @@ const guessNum = function () {
   }
 };
 
+const reset = function () {
+  score = 10;
+  secretNum = Math.trunc(Math.random() * 20) + 1;
+  box.textContent = '?';
+  message.textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.guess').value = '';
+};
+
 document.querySelector('.check').addEventListener('click', guessNum);
+document.querySelector('.again').addEventListener('click', reset);
