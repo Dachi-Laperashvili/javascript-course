@@ -29,6 +29,15 @@ const roll = function () {
   diceEl.src = `dice-${dice}.png`;
 
   //3 Check for rolled 1:if true,switch player
+  if (dice !== 1) {
+    // dice is added to current score
+    currentScore += dice;
+    document.getElementById(`current--${activePlayer}`).textContent =
+      currentScore;
+  } else {
+    // switch to next player
+    activePlayer = activePlayer === 0 ? 1 : 0;
+  }
 };
 
 btnRoll.addEventListener('click', roll);
