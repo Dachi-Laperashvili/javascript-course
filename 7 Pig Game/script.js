@@ -19,3 +19,14 @@ diceEl.classList.add('hidden');
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+
+const roll = function () {
+  //1 Generating a random dice roll
+  const dice = Math.trunc(Math.random() * 6) + 1;
+
+  //2 Display Dice
+
+  //3 Check for rolled 1:if true,switch player
+};
+
+btnRoll.addEventListener('click', roll);
