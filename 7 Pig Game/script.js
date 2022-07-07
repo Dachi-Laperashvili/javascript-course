@@ -13,15 +13,26 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 const btnNew = document.querySelector('.btn--new');
 
-// Starting conditions
-score0.textContent = 0;
-score1.textContent = 0;
-diceEl.classList.add('hidden');
+let scores, currentScore, activePlayer, playing;
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
+// Starting conditions
+const init = function () {
+  scores = [0, 0];
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
+
+  score0.textContent = 0;
+  score1.textContent = 0;
+  current0.textContent = 0;
+  current1.textContent = 0;
+
+  diceEl.classList.add('hidden');
+  player0.classList.add('player--active');
+  player1.classList.remove('player--active');
+  player0.classList.remove('player--winner');
+  player1.classList.remove('player--winner');
+};
 
 const switchPlayer = function () {
   // check if active player is player 0 or player 1 then switch to next one
@@ -82,3 +93,4 @@ const hold = function () {
 
 btnRoll.addEventListener('click', roll);
 btnHold.addEventListener('click', hold);
+btnNew.addEventListener('click', init);
