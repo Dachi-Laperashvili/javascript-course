@@ -34,6 +34,8 @@ const init = function () {
   player1.classList.remove('player--winner');
 };
 
+init();
+
 const switchPlayer = function () {
   // check if active player is player 0 or player 1 then switch to next one
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -46,7 +48,7 @@ const switchPlayer = function () {
 };
 
 const roll = function () {
-  if (playing) {
+  if (playing && currentScore <= 100) {
     //1 Generating a random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;
 
@@ -75,7 +77,7 @@ const hold = function () {
       scores[activePlayer];
 
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       // Finish the Game
       playing = false;
       document
